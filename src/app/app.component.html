@@ -1,20 +1,173 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
-
+<!--Main nav-->
+<nav>
+  <div class="container-fluid">
+    <div class="navbar-collapse">
+      <a
+        class="" 
+        href=""
+      >
+        Start Bootstrap
+      </a>
+      <button
+        type="menu"
+        class="btn btn-secondary"
+      >
+        Menu
+        <i class="fa fa-bars"></i>
+      </button>
+      <ul class="">
+        <li 
+          *ngFor="let item of menuItem"
+          class="nav-item"
+        >
+          <a
+            class="nav-link"
+            href="#"
+          >
+            {{ item.name }}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!--Header-->
+<header>
+  <div class="container-fluid h-100">
+    <div class="row h-100">
+      <div class="col-lg-7">
+        <div class="header-content mx-auto">
+          <h1>
+            New Age is an app landing page that will help you beautifully 
+            showcase your new mobile app, or anything else!
+          </h1>
+          <a 
+            href="#" 
+            class="btn btn-primary btn-lg"
+          >
+            Start Now for Free!
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-5 my-auto">
+        <img src="../assets/phone-img.jpg" alt="sowwy">
+      </div>
+    </div>
+  </div>
+</header>
+<!--download section-->
+<section class="text-center bg-warning">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-8 mx-auto">
+        <h2>
+          Discover what all the buzz is about!
+        </h2>
+        <p>
+          Our app is available on any mobile device!
+          Download now to get started!
+        </p>
+        <div class="badges">
+          <a 
+            href="#" 
+            class="badge-link"
+          >
+            <img src="../assets/google-play-badge.svg" alt="sowwy">
+          </a>
+          <a 
+            href="#" 
+            class="badge-link"
+          >
+            <img src="../assets/apple-store-badge.svg" alt="sowwy">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--Feature section-->
+<section>
+  <div class="container-fluid">
+    <div class="text-center">
+      <h2>
+        Unlimited Features, 
+        Unlimited Fun
+      </h2>
+      <p class="text-muted">
+        Check out what you can do with this app theme!
+      </p>
+      <hr>
+    </div>
+    <div class="row">
+      <div class="col-lg-5 my-auto">
+        <img src="../assets/phone-img.jpg" alt="sowwy">
+      </div>
+      <div class="col-lg-7 my-auto">
+        <div class="container-fluid">
+          <div class="row">
+            <div 
+              *ngFor="let info of featureInfo"
+              class="col-lg-6"
+            >
+              <i class="{{ info.class }} text-primary"></i>
+              <h3>
+                {{ info.title }}
+              </h3>
+              <p class="text-muted">
+                {{ info.content }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--inv section-->
+<section>
+  <div class="container-fluid">
+    <h2>
+      Stop waiting.<br>Start building.
+    </h2>
+    <a 
+      href="#"
+      class="btn btn-primary btn-lg"
+    >
+      Let's Get Started!
+    </a>
+  </div>
+  <div class="overlay"></div>
+</section>
+<!--Contact Section-->
+<section class="bg-warning">
+  <div class="container offset-4">
+    <h2>
+      We <i class="fa fa-heart"></i>
+      new friends!
+    </h2>
+    <ul class="list-inline">
+      <li *ngFor="let icon of socialImg">
+        <a href="#">
+          <i class="{{ icon.class }}"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+<!--Footer-->
+<footer>
+  <div class="container-fluid offset-4">
+    <p>&copy; Your Website 2018. All Rights Reserved.</p>
+    <ul class="list-inline">
+      <li class="list-inline-item">
+        <a href="#">Privacy</a>
+      </li>
+      <li class="list-inline-item">
+        <a href="#">Terms</a>
+      </li>
+      <li class="list-inline-item">
+        <a href="#">FAQ</a>
+      </li>
+    </ul>
+  </div>
+</footer>
